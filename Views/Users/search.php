@@ -21,7 +21,7 @@ $data=$obj->setData($_GET)->searchResult();
                <tr>
                    <th>
            <form action="search.php" method="GET">
-            <input type="text" name="keyword" placeholder="Search ID OR Department...." id="input">
+            <input type="text" name="keyword" placeholder="Search Student ID OR Department...." id="input">
 	<input type="submit" value="Search">
            </form>
                    </th>
@@ -48,18 +48,24 @@ $data=$obj->setData($_GET)->searchResult();
             <th>Student Dept</th>
             <th>Action</th>
 	</tr>
-       
+       <?php if(!empty($data)){?>
 	   <?php
         foreach ($data as $value){
             ?>
+      
 	<tr>
             <td><a href="edit.php?id=<?php echo $value['id'];?>"><?php echo $value['id'];?></a></td>
             <td><?php echo $value['stu_name'];?></td>
             <td><?php echo $value['stu_dob'];?></td>
             <td><a href="edit.php?id=<?php echo $value['id'];?>"><?php echo $value['stu_dept'];?></a></td>
-            <td><a onclick="return confirm('Are you sure trash!!');" href="delete.php?id=<?php echo $value['id'];?>">Delete</a></td>
+            <td><a onclick="return confirm('Are you sure Delete!!');" href="delete.php?id=<?php echo $value['id'];?>">Delete</a></td>
 	</tr>
+        <?php }?>
+        <?php }else{?>
+        <tr><td>Result not found</td></tr>
+        
         <?php } ?>
+      
 
 </table>
 

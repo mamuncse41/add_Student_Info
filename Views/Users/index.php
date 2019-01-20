@@ -17,7 +17,7 @@ session_start();
 </div>
             <form method="post" action="store.php">
                 <table border="1px" align="center" id="table_post">
-	<tr>
+                    <tr>
 	  <h2>
                     <?php
                     echo '<h2 style="color:#006400; font-size:20px; text-align:center;">';
@@ -34,17 +34,18 @@ session_start();
                     echo '<h2>';
                     ?>
                 </h2>
+                     
 	</tr>
         <tr><th><label>Student Information Add</label></th></tr>
 	<tr>
             <td><input type="number" name="id" placeholder="enter student ID..." id="input"></td>
 	</tr>
 	<tr>
-		<td><input type="text" name="stu_name" placeholder="enter student name.." id="input"></td>
+		<td><input type="text" name="stu_name" placeholder="enter student Fullname.." id="input"></td>
 	</tr>
 	<tr>
 		<td>
-                    <input  type="date" min="1960-01-01" max="1999-01-31" name="stu_dob" placeholder="Date Of Birth" id="selectAge">
+                    <input  type="date" min="1960-01-01" max="1999-01-31" name="stu_dob" placeholder="Date Of Birth: yyy-mm-dd" id="selectAge">
 		</td>
 	</tr>
 	<tr>
@@ -52,8 +53,12 @@ session_start();
                     <select name="stu_dept" id="selectCatagory">
 				<option value="0">Select Department</option>
   				<option value="CSE">CSE</option>
+  				<option value="CS">CS</option>
  				 <option value="BBA">BBA</option>
   				<option value="English">English</option>
+  				<option value="Bangla">Bangla</option>
+  				<option value=" Islamic Studies">Islamic Studies</option>
+  				<option value="Economics">Economics</option>
  	 			
 </select>
 		</td>

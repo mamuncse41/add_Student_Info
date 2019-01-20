@@ -79,6 +79,7 @@ Class Users{
 //                        echo '<pre>';
 //                        print_r($data);
 //                        die();
+         
 			return $data;
 	
 		}catch(PDOException $e){
